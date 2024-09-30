@@ -9,14 +9,14 @@ import requests
 import time
 import os
 
+# 크롬 드라이버 설정
+service = Service(ChromeDriverManager().install())
+driver = webdriver.Chrome(service=service)
+
 # 로그인 정보
 username = ""  # 트위터 사용자 이름
 id = ""  # 트위터 아이디
 password = ""  # 트위터 비밀번호
-
-# 크롬 드라이버 설정
-service = Service(ChromeDriverManager().install())
-driver = webdriver.Chrome(service=service)
 
 try:
     # 트위터 로그인 페이지 열기
